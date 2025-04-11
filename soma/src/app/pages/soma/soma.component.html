@@ -1,0 +1,14 @@
+<form>
+  Número 1: <input #numero1 type="text" />
+  <br />
+  Número 2: <input #numero2 type="text" />
+  <br />
+
+  <button type="submit"
+  (click)="somarBotao(numero1.value, numero2.value); $event.preventDefault()">
+    Somar
+  </button>
+  <br />
+  <br />
+  Resultado: <input type="text" [value]="resultado" readonly/>
+</form>
