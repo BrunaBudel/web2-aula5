@@ -1,14 +1,28 @@
 <form>
-  Número 1: <input #numero1 type="text" />
-  <br />
-  Número 2: <input #numero2 type="text" />
-  <br />
+  <div>
+    <mat-form-field>
+      <mat-label>Número 1</mat-label>
+      <input matInput #numero1 placeholder="Digite o primeiro número"/>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Primeiro número da soma</mat-hint>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Número 2</mat-label>
+      <input matInput #numero2 placeholder="Digite o segundo número"/>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Segundo número da soma</mat-hint>
+    </mat-form-field>
+  </div>
 
-  <button type="submit"
+  <button type="button"
+  color="primary"
+  mat-raised-button
   (click)="somarBotao(numero1.value, numero2.value); $event.preventDefault()">
     Somar
   </button>
-  <br />
-  <br />
-  Resultado: <input type="text" [value]="resultado" readonly/>
+  <div>
+    <input matInput [value]="resultado" readonly/>
+  </div>
 </form>
